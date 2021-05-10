@@ -1,5 +1,4 @@
 package com.example.fitnessapps2;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -77,7 +76,7 @@ public class Registeractivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(Registeractivity.this, "REgistration successfull", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Registeractivity.this, "Registration successfull", Toast.LENGTH_LONG).show();
                     openLogin();
                     finish();
                 }else{
