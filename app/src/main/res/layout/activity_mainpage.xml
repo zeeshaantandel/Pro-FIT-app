@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#2C2C2C"
     tools:context=".Mainpage">
 
     <ScrollView
@@ -22,7 +22,7 @@
                 android:id="@+id/upperblock"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:background="#272626"
+                android:background="#171616"
                 android:scrollbars="none">
 
                 <RelativeLayout
@@ -58,7 +58,8 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="160dp"
                     android:text="ZEESHAAN TANDEL"
-                    android:textColor="@color/colorWhite"
+                    android:textColor="@color/orange"
+                    android:fontFamily="@font/roboto_bold"
                     android:textSize="21sp"
                     android:textStyle="bold">
 
@@ -74,8 +75,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="21 KG"
-                        android:textColor="@color/white"
-                        android:textSize="18sp">
+                        android:textColor="@color/orange"
+                        android:textSize="18sp"
+                        android:textStyle="bold">
 
                     </TextView>
 
@@ -85,8 +87,9 @@
                         android:paddingLeft="50dp"
                         android:paddingRight="50dp"
                         android:text="180 CM"
-                        android:textColor="@color/white"
-                        android:textSize="18sp">
+                        android:textColor="@color/orange"
+                        android:textSize="18sp"
+                        android:textStyle="bold">
 
                     </TextView>
 
@@ -94,8 +97,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="19 YRS"
-                        android:textColor="@color/white"
-                        android:textSize="18sp">
+                        android:textColor="@color/orange"
+                        android:textSize="18sp"
+                        android:textStyle="bold">
 
                     </TextView>
 
@@ -108,7 +112,8 @@
                 android:layout_height="165dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="10dp">
+                android:layout_marginRight="10dp"
+                android:id="@+id/workoutRelativeLayout">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -146,7 +151,8 @@
                 android:layout_height="165dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="10dp">
+                android:layout_marginRight="10dp"
+                android:id="@+id/dietRelativeLayout">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -183,7 +189,8 @@
                 android:layout_height="165dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="10dp">
+                android:layout_marginRight="10dp"
+                android:id="@+id/recordRelativeLayout">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -194,7 +201,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="fitXY"
-                        android:src="@drawable/background16">
+                        android:src="@drawable/track_bg">
 
                     </ImageView>
 
@@ -219,7 +226,8 @@
                 android:layout_height="165dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp">
+                android:layout_marginRight="10dp"
+                android:id="@+id/articlesRelativeLayout">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"

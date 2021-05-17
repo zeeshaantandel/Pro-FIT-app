@@ -57,7 +57,7 @@ public class Registeractivity extends AppCompatActivity {
                     if (TextUtils.isEmpty(txt_Email) || TextUtils.isEmpty(txt_Password)) {
                         Toast.makeText(Registeractivity.this, "Empty Credentials", Toast.LENGTH_SHORT).show();
                     } else if (!isValidPassword(txt_Password)) {
-                        Toast.makeText(Registeractivity.this, "Password must contain mix of upper and lower case letters as well as digits and one special charecter(4-20)", Toast.LENGTH_LONG).show();
+                        Toast.makeText(Registeractivity.this, "Password must contain mix of upper and lower case letters as well as digits and one special character(4-20)", Toast.LENGTH_LONG).show();
                     } else {
                         RegisterUser(txt_Email, txt_Password);
                     }
@@ -77,11 +77,11 @@ public class Registeractivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(Registeractivity.this, "REgistration successfull", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Registeractivity.this, "Registration successfull", Toast.LENGTH_LONG).show();
                     openLogin();
                     finish();
                 }else{
-                    Toast.makeText(Registeractivity.this, "Registraaton failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Registeractivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
                 }
             }
         });

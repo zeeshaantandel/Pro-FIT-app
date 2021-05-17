@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/workouts"
+        android:title="Workouts"
+        android:icon="@drawable/workout_icon" />
+
+    <item
+        android:id="@+id/diet"
+        android:title="Diet"
+        android:icon="@drawable/diet_icon" />
+
+    <item
+        android:id="@+id/record"
+        android:title="Record"
+        android:icon="@drawable/record_icon"/>
+
+    <item
+        android:id="@+id/articles"
+        android:title="Articles"
+        android:icon="@drawable/article_icon"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/profile_icon"/>
+</menu>
