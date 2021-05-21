@@ -1,5 +1,4 @@
 package com.example.fitnessapps2;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 

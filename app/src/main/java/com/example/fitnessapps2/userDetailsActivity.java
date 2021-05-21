@@ -1,11 +1,13 @@
 package com.example.fitnessapps2;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -16,7 +18,9 @@ public class userDetailsActivity extends AppCompatActivity {
     private SeekBar seekBarWeight;
     private TextView currentAge;
     private SeekBar seekBarAge;
-    private Button proceed;
+    private RelativeLayout male,female;
+
+    String typeofuser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,17 +94,26 @@ public class userDetailsActivity extends AppCompatActivity {
             }
         });
 
-        proceed=findViewById(R.id.proceed);
-        proceed.setOnClickListener(new View.OnClickListener() {
+        male=findViewById(R.id.male);
+        female=findViewById(R.id.female);
+
+        male.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                openMainPage();
+            public void onClick(View v) {
+                male.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.male_female_focus));
+                female.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.male_female_not_focus));
+                typeofuser="Male";
             }
         });
-    }
 
-    public void openMainPage(){
-        Intent intent=new Intent(this, Mainpage.class);
-        startActivity(intent);
+        female.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                female.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.male_female_focus));
+                male.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.male_female_not_focus));
+                typeofuser="Female";
+            }
+        });
+
     }
 }
