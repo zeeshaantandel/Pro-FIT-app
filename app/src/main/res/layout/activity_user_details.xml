@@ -143,7 +143,8 @@
             android:layout_marginLeft="1dp"
             android:layout_marginRight="1dp"
             android:layout_marginBottom="20dp"
-            android:progressTint="#B8C819">
+            android:progressTint="@color/orange"
+            android:thumbTint="@color/orange">
 
         </SeekBar>
 
@@ -195,7 +196,8 @@
             android:layout_marginLeft="1dp"
             android:layout_marginRight="1dp"
             android:layout_marginBottom="20dp"
-            android:progressTint="#0DAC13">
+            android:progressTint="@color/orange"
+            android:thumbTint="@color/orange">
 
         </SeekBar>
 
@@ -259,27 +261,33 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
-            android:progressTint="#FF5722">
+            android:progressTint="@color/orange"
+            android:thumbTint="@color/orange">
 
         </SeekBar>
 
     </RelativeLayout>
 
-    <android.widget.Button
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="340dp"
         android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="15dp"
-        android:textSize="15sp"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:text="PROCEED"
-        android:background="@drawable/proceed_button_bg"
-        android:id="@+id/proceed">
+        android:layout_below="@id/weight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
 
-    </android.widget.Button>
+        <android.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15sp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:text="PROCEED"
+            android:background="@drawable/proceed_button_bg"
+            android:id="@+id/proceed">
 
+        </android.widget.Button>
+
+    </RelativeLayout>
 
 </RelativeLayout>

@@ -7,6 +7,32 @@
     tools:context=".workouts"
     android:background="#2C2C2C">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/headingWorkout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#171616">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center_vertical"
+                android:text="WORKOUTS"
+                android:textColor="@color/orange"
+                android:textSize="25sp"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+        </RelativeLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -16,27 +42,6 @@
             android:layout_height="wrap_content"
             android:paddingBottom="75dp">
 
-            <RelativeLayout
-                android:id="@+id/headingWorkout"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:background="#171616">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="15dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:gravity="center_vertical"
-                    android:text="WORKOUTS"
-                    android:textStyle="bold|italic"
-                    android:textColor="@color/orange"
-                    android:textSize="25sp">
-
-                </TextView>
-
-            </RelativeLayout>
-
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="190dp"
@@ -44,7 +49,6 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/headingWorkout"
                 android:id="@+id/cardioModule">
 
                 <RelativeLayout
@@ -201,6 +205,8 @@
         </RelativeLayout>
 
     </ScrollView>
+
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"

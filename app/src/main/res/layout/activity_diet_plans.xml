@@ -7,15 +7,154 @@
     tools:context=".workouts"
     android:background="#2C2C2C">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="diet here"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-        android:layout_centerInParent="true">
+        android:orientation="vertical">
 
-    </TextView>
+        <RelativeLayout
+            android:id="@+id/headingDiet"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#171616">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center_vertical"
+                android:text="DIET PLANS"
+                android:textStyle="bold|italic"
+                android:textColor="@color/orange"
+                android:textSize="25sp">
+
+            </TextView>
+
+        </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/vegModule">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#171616">
+
+                    <RelativeLayout
+                        android:id="@+id/vegBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/veg_bg">
+
+                        </ImageView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/vegBackground">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/roboto"
+                            android:layout_centerInParent="true"
+                            android:gravity="center_vertical"
+                            android:text="VEG DIET"
+                            android:letterSpacing="0.2"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold">
+
+                        </TextView>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/vegModule"
+                android:id="@+id/nonVegModule">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#171616">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:id="@+id/nonVegBackground">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/nonveg_bg"
+                            android:scaleType="fitXY">
+
+                        </ImageView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/nonVegBackground">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="NON VEG DIET"
+                            android:letterSpacing="0.2"
+                            android:fontFamily="@font/roboto"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:gravity="center_vertical"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp"
+                            android:textStyle="bold">
+
+                        </TextView>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
