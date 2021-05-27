@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FitnessApp">
-        <activity android:name=".profile_and_settings"></activity>
+        <activity android:name=".EditProfile"></activity>
+        <activity android:name=".AboutUs" />
+        <activity android:name=".ContactUs" />
+        <activity android:name=".PrivacyPolicy" />
+        <activity android:name=".TermsandConditions" />
+        <activity android:name=".profile_and_settings" />
         <activity android:name=".articles" />
         <activity android:name=".trackActivity" />
         <activity android:name=".dietPlans" />

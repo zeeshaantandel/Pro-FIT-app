@@ -47,6 +47,12 @@ public class Loginactivity extends AppCompatActivity {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                openBmi();
+            }
+        });
+        /*buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 String txt_email = inputEmail.getText().toString();
                 String txt_password = password.getText().toString();
                 if (TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password)) {
@@ -73,7 +79,7 @@ public class Loginactivity extends AppCompatActivity {
                     }
                 });
             }
-        });
+        });*/
          /*FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
            if (user != null) {
             // User is signed in

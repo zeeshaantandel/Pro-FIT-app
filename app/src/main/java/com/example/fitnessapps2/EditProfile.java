@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class userDetailsActivity extends AppCompatActivity {
+public class EditProfile extends AppCompatActivity {
     private TextView currentHeight;
     private SeekBar seekBarHeight;
     private TextView currentWeight;
@@ -122,12 +122,12 @@ public class userDetailsActivity extends AppCompatActivity {
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openmainpage();
+                openprofilepage();
             }
         });
     }
-    private void openmainpage(){
-        Intent intent=new Intent(this, Mainpage.class);
+    private void openprofilepage(){
+        Intent intent=new Intent(this, profile_and_settings.class);
         startActivity(intent);
     }
 }

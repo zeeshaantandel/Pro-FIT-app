@@ -6,11 +6,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class profile_and_settings extends AppCompatActivity {
     public BottomNavigationView bottomNavigationView;
+    private TextView Termsandconditions;
+    private TextView privacypolicy;
+    private TextView contactUs;
+    private TextView aboutUs;
+    private TextView editProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +56,71 @@ public class profile_and_settings extends AppCompatActivity {
                 return false;
             }
         });
+
+        Termsandconditions=findViewById(R.id.Termsandconditions);
+        Termsandconditions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openterms();
+            }
+        });
+
+        privacypolicy=findViewById(R.id.privacypolicy);
+        privacypolicy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openprivacypolicy();
+            }
+        });
+
+        contactUs=findViewById(R.id.contactUs);
+        contactUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openContactUs();
+            }
+        });
+
+        aboutUs=findViewById(R.id.aboutUs);
+        aboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openAboutUs();
+            }
+        });
+
+        editProfile=findViewById(R.id.editProfile);
+        editProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openEditProfile();
+            }
+        });
+    }
+
+    private void openterms(){
+        Intent intent=new Intent(this,TermsandConditions.class);
+        startActivity(intent);
+    }
+
+    private void openprivacypolicy(){
+        Intent intent=new Intent(this,PrivacyPolicy.class);
+        startActivity(intent);
+    }
+
+    private void openContactUs(){
+        Intent intent=new Intent(this,ContactUs.class);
+        startActivity(intent);
+    }
+
+    private void openAboutUs(){
+        Intent intent=new Intent(this,AboutUs.class);
+        startActivity(intent);
+    }
+
+    private void openEditProfile(){
+        Intent intent=new Intent(this,EditProfile.class);
+        startActivity(intent);
     }
 }
 
