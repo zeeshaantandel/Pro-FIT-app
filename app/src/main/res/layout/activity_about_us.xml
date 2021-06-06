@@ -4,14 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutUs">
+    tools:context=".AboutUs"
+    android:background="#2C2C2C">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="about us"
-        android:textSize="35sp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    </TextView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/headingaboutus"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#171616">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center_vertical"
+                android:text="ABOUT US"
+                android:textColor="@color/orange"
+                android:textSize="25sp"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/background8"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:id="@+id/aboutUsLogo">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutUsLogo"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="ProFIT"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

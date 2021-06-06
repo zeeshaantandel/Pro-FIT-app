@@ -2,15 +2,18 @@ package com.example.fitnessapps2;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class workouts extends AppCompatActivity {
     public BottomNavigationView bottomNavigationView;
+    private CardView cardioModule;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,5 +52,18 @@ public class workouts extends AppCompatActivity {
                 return false;
             }
         });
+
+        cardioModule=findViewById(R.id.cardioModule);
+        cardioModule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                opencardio();
+            }
+        });
+    }
+
+    private void opencardio(){
+        Intent intent=new Intent(this, workout_cardio.class);
+        startActivity(intent);
     }
 }
