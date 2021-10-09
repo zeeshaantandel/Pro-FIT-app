@@ -14,6 +14,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class workouts extends AppCompatActivity {
     public BottomNavigationView bottomNavigationView;
     private CardView cardioModule;
+    private CardView muscleGroupModule;
+    private CardView yogaModule;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,16 +29,19 @@ public class workouts extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.diet:
                         startActivity(new Intent(getApplicationContext(),dietPlans.class));
+                        finish();
                         overridePendingTransition(0,0);
                         return true;
 
                     case R.id.record:
                         startActivity(new Intent(getApplicationContext(),trackActivity.class));
+                        finish();
                         overridePendingTransition(0,0);
                         return true;
 
                     case R.id.articles:
                         startActivity(new Intent(getApplicationContext(),articles.class));
+                        finish();
                         overridePendingTransition(0,0);
                         return true;
 
@@ -45,6 +50,7 @@ public class workouts extends AppCompatActivity {
 
                     case R.id.profile:
                         startActivity(new Intent(getApplicationContext(), profile_and_settings.class));
+                        finish();
                         overridePendingTransition(0,0);
                         return true;
 
@@ -60,10 +66,36 @@ public class workouts extends AppCompatActivity {
                 opencardio();
             }
         });
+
+        muscleGroupModule=findViewById(R.id.muscleGroupModule);
+        muscleGroupModule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openmusclegroups();
+            }
+        });
+
+        yogaModule=findViewById(R.id.yogaModule);
+        yogaModule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openyoga();
+            }
+        });
     }
 
     private void opencardio(){
         Intent intent=new Intent(this, workout_cardio.class);
+        startActivity(intent);
+    }
+
+    private void openmusclegroups(){
+        Intent intent=new Intent(workouts.this, workout_muscle.class);
+        startActivity(intent);
+    }
+
+    private void openyoga(){
+        Intent intent=new Intent(workouts.this, workout_yoga.class);
         startActivity(intent);
     }
 }

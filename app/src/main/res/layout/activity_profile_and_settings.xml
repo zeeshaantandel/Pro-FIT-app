@@ -81,7 +81,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:scaleType="fitXY"
-                                    android:src="@drawable/background_articles">
+                                    android:src="@drawable/profile_image">
 
                                 </ImageView>
 
@@ -100,7 +100,7 @@
                                 android:id="@+id/profileName"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="ZEESHAAN TANDEL"
+
                                 android:letterSpacing="0.02"
                                 android:textColor="@color/white"
                                 android:fontFamily="@font/roboto_bold"
@@ -118,6 +118,7 @@
                             android:layout_marginTop="210dp">
 
                             <TextView
+                                android:id="@+id/p_weight"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="21 KG"
@@ -128,6 +129,7 @@
                             </TextView>
 
                             <TextView
+                                android:id="@+id/P_height"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="50dp"
@@ -140,6 +142,7 @@
                             </TextView>
 
                             <TextView
+                                android:id="@+id/P_age"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="19 YRS"
@@ -245,7 +248,7 @@
                                     </ImageView>
 
                                     <TextView
-                                        android:layout_width="match_parent"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:text="Notifications"
                                         android:textColor="@color/white"
@@ -253,6 +256,25 @@
                                         android:layout_marginLeft="20dp">
 
                                     </TextView>
+
+                                   <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                       <Switch
+                                           android:layout_width="wrap_content"
+                                           android:layout_height="wrap_content"
+                                           android:layout_alignParentRight="true"
+                                           android:layout_marginRight="10dp"
+                                           android:theme="@style/myswitch"
+                                           android:thumb="@drawable/ic_baseline_circle_24"
+                                           tools:ignore="UseSwitchCompatOrMaterialXml"
+                                           android:trackTint="@color/white"
+                                           android:id="@+id/notificationswitch">
+
+                                       </Switch>
+
+                                    </RelativeLayout>
 
                                 </LinearLayout>
 
@@ -283,7 +305,8 @@
                                         android:text="Log out"
                                         android:textColor="@color/white"
                                         android:textSize="19sp"
-                                        android:layout_marginLeft="20dp">
+                                        android:layout_marginLeft="20dp"
+                                        android:id="@+id/logout">
 
                                     </TextView>
 

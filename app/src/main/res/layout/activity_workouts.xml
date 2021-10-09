@@ -156,7 +156,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/muscleGroupModule">
+                android:layout_below="@+id/muscleGroupModule"
+                android:id="@+id/yogaModule">
 
                 <RelativeLayout
                     android:layout_width="match_parent"

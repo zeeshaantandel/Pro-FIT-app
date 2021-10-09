@@ -13,44 +13,43 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import io.perfmark.Tag;
 
 public class Loginactivity extends AppCompatActivity {
     public TextView signUp;
     private Button buttonLogin;
     private EditText inputEmail;
     private EditText password;
-
+    private TextView forgetpassword;
+    private Button signupbutton;
     private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loginactivity);
-        signUp = findViewById(R.id.signUp);
         buttonLogin = findViewById(R.id.buttonLogin);
         inputEmail = findViewById(R.id.inputEmail);
         password = findViewById(R.id.password);
+        signupbutton=findViewById(R.id.signupbutton);
         auth = FirebaseAuth.getInstance();
 
+        signupbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openregister();
+            }
+        });
 
-        signUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openRegister();
-            }
-        });
         buttonLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openBmi();
-            }
-        });
-        /*buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String txt_email = inputEmail.getText().toString();
@@ -62,11 +61,12 @@ public class Loginactivity extends AppCompatActivity {
                 }
             }
 
+
             private void loginUser(String txt_email, String txt_password) {
                 auth.signInWithEmailAndPassword(txt_email, txt_password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
-                        Toast.makeText(Loginactivity.this, "Loginsucessfull", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Loginactivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                         openBmi();
                         finish();
                     }
@@ -79,29 +79,47 @@ public class Loginactivity extends AppCompatActivity {
                     }
                 });
             }
-        });*/
-         /*FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-           if (user != null) {
-            // User is signed in
-            Intent i = new Intent(Loginactivity.this, );
-            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(i);
-           } else {
-          // User is signed out
-          Log.d(TAG, "onAuthStateChanged:signed_out");
-          }*/
-    }
+        });
 
-    public void openRegister() {
-        Intent intent = new Intent(this, Registeractivity.class);
-        startActivity(intent);
+        forgetpassword=findViewById(R.id.fogotPassword);
+        forgetpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String email = inputEmail.getText().toString();
+                if(TextUtils.isEmpty(email)){
+                    Toast.makeText(Loginactivity.this, "Empty Credentials", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    auth.sendPasswordResetEmail(email)
+                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(Loginactivity.this, "Recovery Email Send", Toast.LENGTH_LONG).show();
+                                    }
+
+                                    else {
+                                        Toast.makeText(Loginactivity.this, "Failed to Send Email", Toast.LENGTH_SHORT).show();
+                                    }
+
+                                }
+                            });
+                }
+
+            }
+        });
     }
 
     public void openBmi() {
-        Intent intent = new Intent(this, userDetailsActivity.class);
+        Intent intent = new Intent(this, Mainpage.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void openregister() {
+        Intent intent = new Intent(this, Registeractivity.class);
         startActivity(intent);
         finish();
     }
 }
-
-

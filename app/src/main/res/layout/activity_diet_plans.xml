@@ -48,7 +48,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
-                android:id="@+id/vegModule">
+                android:id="@+id/weightGainModule">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -56,7 +56,7 @@
                     android:background="#171616">
 
                     <RelativeLayout
-                        android:id="@+id/vegBackground"
+                        android:id="@+id/weightGainBackground"
                         android:layout_width="match_parent"
                         android:layout_height="170dp">
 
@@ -73,7 +73,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_below="@+id/vegBackground">
+                        android:layout_below="@+id/weightGainBackground">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -82,7 +82,7 @@
                             android:fontFamily="@font/roboto"
                             android:layout_centerInParent="true"
                             android:gravity="center_vertical"
-                            android:text="VEG DIET"
+                            android:text="WEIGHT GAIN"
                             android:letterSpacing="0.2"
                             android:textColor="@color/white"
                             android:textSize="16sp"
@@ -102,8 +102,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/vegModule"
-                android:id="@+id/nonVegModule">
+                android:layout_below="@+id/weightGainModule"
+                android:id="@+id/weightLossModule">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -113,7 +113,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="170dp"
-                        android:id="@+id/nonVegBackground">
+                        android:id="@+id/weightLossBackground">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -128,12 +128,12 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_below="@id/nonVegBackground">
+                        android:layout_below="@id/weightLossBackground">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="NON VEG DIET"
+                            android:text="WEIGHT LOSS"
                             android:letterSpacing="0.2"
                             android:fontFamily="@font/roboto"
                             android:textColor="@color/white"

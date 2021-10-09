@@ -57,7 +57,7 @@
                 android:layout_marginTop="20dp"
                 android:textColor="@color/white"
                 android:textSize="19sp"
-                android:text="ProFIT App respects the privacy rights of our users and are committed to protecting the information collected through our online services. ProFIT has adopted this privacy policy to explain how ProFIT collects, stores, and uses the information collected in connection with ProFIT’s App.">
+                android:text="Pro-FIT App respects the privacy rights of our users and are committed to protecting the information collected through our online services. Pro-FIT has adopted this privacy policy to explain how Pro-FIT collects, stores, and uses the information collected in connection with Pro-FIT’s App.">
 
             </TextView>
 
@@ -96,9 +96,9 @@
                 android:layout_marginTop="5dp"
                 android:textColor="@color/white"
                 android:textSize="19sp"
-                android:text="For purposes of this Privacy Policy, “non-personal data” means information that does not directly identify you, which may include your age, weight, and gender. Additionally, non-personal data includes “aggregate” and “de-personalized” information, which is data ProFIT collects about the use of ProFIT Apps, from which any personally identifiable data has been removed.
+                android:text="For purposes of this Privacy Policy, “non-personal data” means information that does not directly identify you, which may include your age, weight, and gender. Additionally, non-personal data includes “aggregate” and “de-personalized” information, which is data Pro-FIT collects about the use of Pro-FIT Apps, from which any personally identifiable data has been removed.
 
-\n\nProFIT collects non-personal data from you to make your use of the Apps more efficient and useful. For example, if you provide non-personal data about you, the App may provide certain information about your workout such as calories burned or other tailored calculations about your workout.
+\n\nPro-FIT collects non-personal data from you to make your use of the Apps more efficient and useful. For example, if you provide non-personal data about you, the App may provide certain information about your workout such as calories burned or other tailored calculations about your workout.
 ">
 
             </TextView>
@@ -127,9 +127,9 @@
                 android:textSize="19sp"
                 android:text="For purposes of this Privacy Policy, “personal data” means personally identifiable information that specifically identifies you as an individual.
 
-\n\nThe types of personal data may vary depending on the type of activity you are engaged in. The personal data ProFIT may collect, process and use may include, but are not limited to your name, screen/nick name, e-mail address, phone number, photo or other image, age, sex and location (only if directly identifiable to you, otherwise ProFIT treats location as non-personal data).
+\n\nThe types of personal data may vary depending on the type of activity you are engaged in. The personal data Pro-FIT may collect, process and use may include, but are not limited to your name, screen/nick name, e-mail address, phone number, photo or other image, age, sex and location (only if directly identifiable to you, otherwise Pro-FIT treats location as non-personal data).
 
-\n\nProFIT may use collected personal data for purposes of analyzing usage of the Apps, providing customer and technical support, managing and providing Apps (including managing advertisement serving) and to further develop the Apps and other ProFIT services and products. ProFIT may combine non-personal data with personal data.
+\n\nPro-FIT may use collected personal data for purposes of analyzing usage of the Apps, providing customer and technical support, managing and providing Apps (including managing advertisement serving) and to further develop the Apps and other Pro-FIT services and products. Pro-FIT may combine non-personal data with personal data.
 ">
 
             </TextView>
@@ -156,7 +156,7 @@
                 android:layout_marginTop="5dp"
                 android:textColor="@color/white"
                 android:textSize="19sp"
-                android:text="ProFIT collects and processes personal data on a voluntary basis and it is not in the business of selling your personal data to third parties. Personal data may, however, occasionally be disclosed in accordance with law and this Privacy Policy. Additionally, ProFIT may disclose personal data to any of its affiliated companies in accordance with this Privacy Policy.">
+                android:text="Pro-FIT collects and processes personal data on a voluntary basis and it is not in the business of selling your personal data to third parties. Personal data may, however, occasionally be disclosed in accordance with law and this Privacy Policy. Additionally, Pro-FIT may disclose personal data to any of its affiliated companies in accordance with this Privacy Policy.">
 
             </TextView>
 
@@ -182,7 +182,7 @@
                 android:layout_marginTop="5dp"
                 android:textColor="@color/white"
                 android:textSize="19sp"
-                android:text="ProFIT retains the data collected pursuant to this Privacy Policy for the period necessary to fulfill the purposes outlined in this Privacy Policy unless a longer retention period is required or permitted by law. Thereafter if the collected data is no longer needed for purposes specified in this Privacy Policy, ProFIT deletes all aforementioned data in our possession within a reasonable timeframe. ProFIT does not verify the correctness of personal data.">
+                android:text="Pro-FIT retains the data collected pursuant to this Privacy Policy for the period necessary to fulfill the purposes outlined in this Privacy Policy unless a longer retention period is required or permitted by law. Thereafter if the collected data is no longer needed for purposes specified in this Privacy Policy, Pro-FIT deletes all aforementioned data in our possession within a reasonable timeframe. Pro-FIT does not verify the correctness of personal data.">
 
             </TextView>
 
@@ -208,7 +208,7 @@
                 android:layout_marginTop="5dp"
                 android:textColor="@color/white"
                 android:textSize="19sp"
-                android:text="ProFIT will provide you with reasonable access to any of your personal data which you have provided to us. If you wish to access, update or correct any personal data we hold about you, or if you want us to delete any information about you that we have collected, you may choose to edit your profile. At your request, we will update, correct, or delete from our databases any personally-identifiable information we have about you.">
+                android:text="Pro-FIT will provide you with reasonable access to any of your personal data which you have provided to us. If you wish to access, update or correct any personal data we hold about you, or if you want us to delete any information about you that we have collected, you may choose to edit your profile. At your request, we will update, correct, or delete from our databases any personally-identifiable information we have about you.">
 
             </TextView>
 

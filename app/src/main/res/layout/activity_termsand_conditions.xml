@@ -65,7 +65,7 @@
                <TextView
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text= "By using this application (the “ProFIT”) on any mobile phone, tablet, console or other device (collectively, “Device”), you signify that you have read, understand and agreed to be bound by these Terms of Use and any other applicable law. The ProFit community may change these Terms of Use at any time without notice, effective upon its posting to the App. Your continued use of the App shall be considered your acceptance to the revised Terms of Use. If you do not agree to these Terms of Use, please do not use this App."
+               android:text= "By using this application (the “Pro-FIT”) on any mobile phone, tablet, console or other device (collectively, “Device”), you signify that you have read, understand and agreed to be bound by these Terms of Use and any other applicable law. The Pro-FIT community may change these Terms of Use at any time without notice, effective upon its posting to the App. Your continued use of the App shall be considered your acceptance to the revised Terms of Use. If you do not agree to these Terms of Use, please do not use this App."
                 android:textColor="@color/white"
                android:layout_marginLeft="15dp"
                android:layout_marginTop="5dp"
@@ -96,7 +96,7 @@
                    android:layout_marginTop="5dp"
                    android:textColor="@color/white"
                    android:textSize="19sp"
-                   android:text="The App may include features that promote physical activity. Consider the risks involved and consult with your medical professional before engaging in any physical activity. ProFIT is not responsible or liable for any injuries or damages you may sustain that result from your use of, or inability to use, the features of the App.">
+                   android:text="The App may include features that promote physical activity. Consider the risks involved and consult with your medical professional before engaging in any physical activity. Pro-FIT is not responsible or liable for any injuries or damages you may sustain that result from your use of, or inability to use, the features of the App.">
 
                </TextView>
 
@@ -122,7 +122,7 @@
                    android:layout_marginTop="5dp"
                    android:textColor="@color/white"
                    android:textSize="19sp"
-                   android:text="You may use the Content only for your own non-commercial use to use the App. You agree not to change or delete any ownership notices from materials downloaded or printed from the App. You agree not to modify, copy, translate, broadcast, perform, display, distribute, frame, reproduce, republish, download, display, post, transmit or sell any Intellectual Property or Content appearing on the App, including Personal Information (defined below), without ProFIT’s prior written consent, unless it is your own Personal Information that you legally post on the App. You agree not to use any data mining, robots, scraping or similar data gathering methods. Nothing in these Terms of Use shall be interpreted as granting any license of intellectual property rights to you.">
+                   android:text="You may use the Content only for your own non-commercial use to use the App. You agree not to change or delete any ownership notices from materials downloaded or printed from the App. You agree not to modify, copy, translate, broadcast, perform, display, distribute, frame, reproduce, republish, download, display, post, transmit or sell any Intellectual Property or Content appearing on the App, including Personal Information (defined below), without Pro-FIT’s prior written consent, unless it is your own Personal Information that you legally post on the App. You agree not to use any data mining, robots, scraping or similar data gathering methods. Nothing in these Terms of Use shall be interpreted as granting any license of intellectual property rights to you.">
 
                </TextView>
 
@@ -148,7 +148,7 @@
                    android:layout_marginTop="5dp"
                    android:textColor="@color/white"
                    android:textSize="19sp"
-                   android:text="To use the App, you may be asked to provide certain personal information, including information about your weight, age and gender, to optimize your use of the App. If you choose to provide such Personal Information, you agree to provide accurate and current information about yourself, and ProFIT will not be responsible for any injury related to any Personal Information you submit to the App or omit. The use or disclosure of any Personal Information you supply will be governed by our Privacy Policy.">
+                   android:text="To use the App, you may be asked to provide certain personal information, including information about your weight, age and gender, to optimize your use of the App. If you choose to provide such Personal Information, you agree to provide accurate and current information about yourself, and Pro-FIT will not be responsible for any injury related to any Personal Information you submit to the App or omit. The use or disclosure of any Personal Information you supply will be governed by our Privacy Policy.">
 
                </TextView>
 
@@ -174,7 +174,7 @@
                    android:layout_marginTop="5dp"
                    android:textColor="@color/white"
                    android:textSize="19sp"
-                   android:text="The App contains services and features that are available to certain mobile Devices. Your carrier’s normal rates and fees apply. Not all mobile services will work with all carriers or Devices. By using ProFIT’s mobile services, you agree that we may communicate with you by electronic means to your mobile Device and that certain information about your use of these services may be shared with us. If you change or deactivate your mobile phone number, you must promptly update your account information to ensure that we don’t send your messages to a different person.">
+                   android:text="The App contains services and features that are available to certain mobile Devices. Your carrier’s normal rates and fees apply. Not all mobile services will work with all carriers or Devices. By using Pro-FIT’s mobile services, you agree that we may communicate with you by electronic means to your mobile Device and that certain information about your use of these services may be shared with us. If you change or deactivate your mobile phone number, you must promptly update your account information to ensure that we don’t send your messages to a different person.">
 
                </TextView>
 
@@ -226,7 +226,7 @@
                    android:layout_marginTop="5dp"
                    android:textColor="@color/white"
                    android:textSize="19sp"
-                   android:text="ProFIT reserves the right in its sole discretion to terminate your account, delete your profile and any of your Personal Information, and restrict your use of all or any part of the App for any or no reason, without notice, and without liability to you or anyone else. ProFIT also reserves the right to block users from certain IP addresses or Device numbers and prevent access to the App. These Terms of Use remain in effect even after your account is terminated. ">
+                   android:text="Pro-FIT reserves the right in its sole discretion to terminate your account, delete your profile and any of your Personal Information, and restrict your use of all or any part of the App for any or no reason, without notice, and without liability to you or anyone else. Pro-FIT also reserves the right to block users from certain IP addresses or Device numbers and prevent access to the App. These Terms of Use remain in effect even after your account is terminated. ">
 
                </TextView>
 

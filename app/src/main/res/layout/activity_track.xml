@@ -7,15 +7,160 @@
     tools:context=".workouts"
     android:background="#2C2C2C">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="track here"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-        android:layout_centerInParent="true">
+        android:orientation="vertical">
 
-    </TextView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/headingaboutus"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#171616">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center_vertical"
+                android:text="RECORD ACTIVITIES"
+                android:textColor="@color/orange"
+                android:textSize="25sp"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/walkModule">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#171616">
+
+                        <RelativeLayout
+                            android:id="@+id/walkBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/walking_bg">
+
+                            </ImageView>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_below="@+id/walkBackground">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/roboto"
+                                android:layout_centerInParent="true"
+                                android:gravity="center_vertical"
+                                android:text="WALKING"
+                                android:letterSpacing="0.2"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/walkModule"
+                    android:id="@+id/runModule">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#171616">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            android:id="@+id/runBackground">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/running_bg"
+                                android:scaleType="fitXY">
+
+                            </ImageView>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/runBackground">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="RUNNING"
+                                android:letterSpacing="0.2"
+                                android:fontFamily="@font/roboto"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:gravity="center_vertical"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="bold">
+
+                            </TextView>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"

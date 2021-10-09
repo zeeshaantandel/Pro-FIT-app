@@ -13,6 +13,12 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class userDetailsActivity extends AppCompatActivity {
     private TextView currentHeight;
     private SeekBar seekBarHeight;
@@ -22,13 +28,26 @@ public class userDetailsActivity extends AppCompatActivity {
     private SeekBar seekBarAge;
     private RelativeLayout male,female;
     private Button proceed;
-
+    private FirebaseFirestore fstore;
+    private FirebaseAuth auth;
+    private String userID;
     String typeofuser;
+    Double height;
+    Double result;
+    Double weight=55d;
+    Double heightincm=100d;
+    int age=21;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_details);
+
+        auth = FirebaseAuth.getInstance();
+        fstore = FirebaseFirestore.getInstance();
+
         currentHeight=findViewById(R.id.currentHeight);
         seekBarHeight=findViewById(R.id.seekBarHeight);
         seekBarHeight.setMax(230);
@@ -38,6 +57,7 @@ public class userDetailsActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
                 currentHeight.setText(String.valueOf(progress));
+                heightincm=Double.valueOf(progress);
             }
 
             @Override
@@ -61,6 +81,7 @@ public class userDetailsActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
                 currentWeight.setText(String.valueOf(progress));
+                weight = Double.valueOf(progress);
             }
 
             @Override
@@ -84,6 +105,7 @@ public class userDetailsActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
                 currentAge.setText(String.valueOf(progress));
+                age=progress;
             }
 
             @Override
@@ -118,16 +140,32 @@ public class userDetailsActivity extends AppCompatActivity {
             }
         });
 
-        proceed=findViewById(R.id.proceed);
+        proceed = findViewById(R.id.proceed);
         proceed.setOnClickListener(new View.OnClickListener() {
+
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
+                userID = auth.getCurrentUser().getUid();
+                height = heightincm / 100;
+                result = weight / (height * height);
+                Map<String,Object> bmi=new HashMap<>();
+                bmi.put("bmi_height",heightincm);
+                bmi.put("bmi_weight",weight);
+                bmi.put("bmi_result",result);
+                bmi.put("User_age",age);
+                fstore.collection("Bmi_values").document(userID).set(bmi);
+
                 openmainpage();
+
+
             }
         });
+
     }
+
     private void openmainpage(){
-        Intent intent=new Intent(this, Mainpage.class);
+        Intent intent=new Intent(userDetailsActivity.this, Mainpage.class);
         startActivity(intent);
+        finish();
     }
 }

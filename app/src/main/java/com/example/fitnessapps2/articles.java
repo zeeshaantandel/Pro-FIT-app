@@ -30,11 +30,13 @@ public class articles extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.diet:
                         startActivity(new Intent(getApplicationContext(),dietPlans.class));
+                        finish();
                         overridePendingTransition(0,0);
                         return true;
 
                     case R.id.record:
                         startActivity(new Intent(getApplicationContext(),trackActivity.class));
+                        finish();
                         overridePendingTransition(0,0);
                         return true;
 
@@ -43,11 +45,13 @@ public class articles extends AppCompatActivity {
 
                     case R.id.workouts:
                         startActivity(new Intent(getApplicationContext(),workouts.class));
+                        finish();
                         overridePendingTransition(0,0);
                         return true;
 
                     case R.id.profile:
                         startActivity(new Intent(getApplicationContext(), profile_and_settings.class));
+                        finish();
                         overridePendingTransition(0,0);
                         return true;
 

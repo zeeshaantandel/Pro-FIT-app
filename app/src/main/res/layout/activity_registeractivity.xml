@@ -4,29 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background8"
+    android:background="@drawable/login_bg"
     tools:context=".Registeractivity">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/register"
-        android:textColor="@color/colorWhite"
-        android:textSize="36sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06999999" />
 
     <EditText
         android:id="@+id/inputUsername"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_person"
@@ -38,11 +24,13 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/inputEmail"
@@ -59,8 +47,9 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="@+id/inputUsername"
         app:layout_constraintStart_toStartOf="@+id/inputUsername"
         app:layout_constraintTop_toBottomOf="@+id/inputUsername" />
@@ -73,25 +62,12 @@
         android:background="@drawable/button_bg"
         android:shadowColor="#FFFFFF"
         android:text="REGISTER"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textColorHighlight="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/confirmPassword"
         app:layout_constraintStart_toStartOf="@+id/confirmPassword"
         app:layout_constraintTop_toBottomOf="@+id/confirmPassword" />
-
-    <TextView
-        android:id="@+id/alreadyHaveAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:text="Already Have an Account?"
-        android:textColor="@color/colorWhite"
-        android:textSize="18sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="@+id/buttonRegister"
-        app:layout_constraintStart_toStartOf="@+id/buttonRegister"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
 
     <EditText
         android:id="@+id/password"
@@ -108,8 +84,9 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="@+id/inputEmail"
         app:layout_constraintStart_toStartOf="@+id/inputEmail"
         app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
@@ -129,10 +106,29 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="@+id/password"
         app:layout_constraintStart_toStartOf="@+id/password"
         app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/input_bg"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegister"
+        app:layout_constraintVertical_bias="1.0">
+
+    </Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

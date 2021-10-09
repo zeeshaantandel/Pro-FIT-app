@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="187dp"
-        tools:layout_editor_absoluteY="270dp">
+        tools:layout_editor_absoluteY="270dp"
+        android:paddingBottom="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,24 +24,61 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_dumbbell"
+                        android:layout_marginLeft="90dp">
+
+                    </ImageView>
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
-                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
                     android:text="Pro-FIT"
-                    android:textColor="@color/orange"
-                    android:textSize="30sp"
-                    android:textStyle="bold|italic">
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical">
 
                 </TextView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:cardCornerRadius="200dp"
+                        android:backgroundTint="#171616"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="40dp"
+                        android:id="@+id/profileicon">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="29dp"
+                            android:src="@drawable/profile_icon"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:tint="@color/white"
+                            tools:ignore="UseAppTint">
+
+                        </ImageView>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
 
             </RelativeLayout>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 app:cardCornerRadius="10dp">
@@ -71,7 +109,7 @@
                             android:gravity="center"
                             android:letterSpacing="0.1"
                             android:text="BMI"
-                            android:textColor="@color/colorWhite"
+                            android:textColor="@color/orange"
                             android:textSize="25sp"
                             android:textStyle="bold">
 
@@ -94,10 +132,11 @@
                                 android:layout_height="wrap_content"
                                 android:text="21 KG"
                                 android:layout_gravity="center_vertical"
-                                android:layout_marginLeft="30dp"
+                                android:layout_marginLeft="25dp"
                                 android:textColor="@color/white"
                                 android:textSize="20sp"
-                                android:textStyle="bold">
+                                android:textStyle="bold|italic"
+                                android:id="@+id/weight_display">
 
                             </TextView>
 
@@ -122,24 +161,27 @@
                                 android:layout_marginLeft="10dp"
                                 android:textColor="@color/white"
                                 android:textSize="20sp"
-                                android:textStyle="bold">
+                                android:textStyle="bold|italic"
+                                android:id="@+id/height_display">
 
                             </TextView>
 
                             <RelativeLayout
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
                                 android:layout_gravity="center_vertical"
-                                android:layout_marginLeft="70dp"
-                                android:background="@drawable/bmi_bg_underweight">
+                                android:layout_marginLeft="90dp"
+                                android:id="@+id/resultcircle"
+                                android:background="@drawable/bmi_bg_normal">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="23.04"
+                                    android:id="@+id/Bmi_result"
                                     android:textColor="@color/black"
                                     android:layout_centerInParent="true"
-                                    android:textStyle="bold">
+                                    android:textStyle="bold|italic">
 
                                 </TextView>
 
@@ -149,43 +191,42 @@
 
                     </RelativeLayout>
 
-                   <androidx.cardview.widget.CardView
-                       android:layout_width="140dp"
-                       android:layout_height="60dp"
-                       android:layout_below="@id/bmiMiddleBlock"
-                       android:layout_toLeftOf="@id/bmiverticalpartition"
-                       android:layout_marginRight="20dp"
-                       android:layout_marginTop="20dp"
-                       app:cardCornerRadius="50dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="140dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/bmiMiddleBlock"
+                        android:layout_toLeftOf="@id/bmiverticalpartition"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        app:cardCornerRadius="50dp">
 
-                       <RelativeLayout
-                           android:layout_width="match_parent"
-                           android:layout_height="match_parent"
-                           android:id="@+id/underweightBlock"
-                           android:background="@drawable/bmi_bg_underweight">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/underweightBlock"
+                            android:background="@drawable/bmi_bg_underweight">
 
-                       </RelativeLayout>
+                        </RelativeLayout>
 
-                       <TextView
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:text="Underweight\n18.5"
-                           android:textAlignment="center"
-                           android:textStyle="bold"
-                           android:textSize="16sp"
-                           android:textColor="@color/white"
-                           android:layout_gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Underweight\n less than 18.5"
+                            android:textAlignment="center"
+                            android:textStyle="italic|bold"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            tools:ignore="HardcodedText" />
 
-                       </TextView>
-
-                   </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="140dp"
-                        android:layout_height="60dp"
+                        android:layout_height="50dp"
                         android:layout_below="@id/bmiMiddleBlock"
                         android:layout_toRightOf="@id/bmiverticalpartition"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="20dp"
                         app:cardCornerRadius="50dp"
                         android:id="@+id/normalBlockCardview">
@@ -203,8 +244,8 @@
                             android:layout_height="wrap_content"
                             android:text="Normal Weight\n18.5-25"
                             android:textAlignment="center"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
+                            android:textStyle="bold|italic"
+                            android:textSize="15sp"
                             android:textColor="@color/white"
                             android:layout_gravity="center">
 
@@ -214,10 +255,10 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="140dp"
-                        android:layout_height="60dp"
+                        android:layout_height="50dp"
                         android:layout_below="@id/normalBlockCardview"
                         android:layout_toLeftOf="@id/bmiverticalpartition"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="10dp"
                         android:layout_marginTop="20dp"
                         app:cardCornerRadius="50dp">
 
@@ -234,8 +275,8 @@
                             android:layout_height="wrap_content"
                             android:text="Overweight\n25-30"
                             android:textAlignment="center"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
+                            android:textStyle="bold|italic"
+                            android:textSize="15sp"
                             android:textColor="@color/white"
                             android:layout_gravity="center">
 
@@ -245,10 +286,10 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="140dp"
-                        android:layout_height="60dp"
+                        android:layout_height="50dp"
                         android:layout_below="@id/normalBlockCardview"
                         android:layout_toRightOf="@id/bmiverticalpartition"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="20dp"
                         app:cardCornerRadius="50dp">
 
@@ -263,10 +304,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Obese\n>30"
+                            android:text="Obese\ngreater than 30"
                             android:textAlignment="center"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
+                            android:textStyle="bold|italic"
+                            android:textSize="15sp"
                             android:textColor="@color/white"
                             android:layout_gravity="center">
 
@@ -287,11 +328,11 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/workoutRelativeLayout"
-                android:background="#171616">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/workoutRelativeLayout"
+                    android:background="#171616">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -308,26 +349,26 @@
 
                     </RelativeLayout>
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_below="@+id/workoutBackground">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/workoutBackground">
 
-                   <TextView
-                       android:layout_width="match_parent"
-                       android:layout_height="match_parent"
-                       android:text="WORKOUTS"
-                       android:textColor="@color/white"
-                       android:textSize="16sp"
-                       android:textStyle="bold"
-                       android:gravity="center"
-                       android:fontFamily="@font/roboto_bold">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="WORKOUTS"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:fontFamily="@font/roboto_bold">
 
-                   </TextView>
+                        </TextView>
+
+                    </RelativeLayout>
 
                 </RelativeLayout>
-
-            </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 

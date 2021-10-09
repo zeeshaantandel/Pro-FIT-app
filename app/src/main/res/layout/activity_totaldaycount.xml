@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".totaldaycount"
+    android:background="#2C2C2C">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/headingaboutus"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="#171616">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_vertical"
+                    android:text="YOUR DAILY COUNT"
+                    android:textColor="@color/orange"
+                    android:textSize="25sp"
+                    android:textStyle="bold|italic">
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:cardCornerRadius="200dp"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/steps">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#171616">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/stepnumber">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/orange"
+                        android:textSize="30sp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textStyle="bold"
+                        android:id="@+id/stepcount">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stepnumber"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:id="@+id/stepstext">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="STEPS"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textSize="23sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/stepnumber"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="25dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_footsteps_silhouette_variant">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/centerhorizontalline">
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                app:cardCornerRadius="200dp"
+                android:layout_toLeftOf="@id/centerhorizontalline"
+                android:layout_marginRight="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#171616">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/caloriesnumber"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/orange"
+                            android:textSize="30sp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textStyle="bold"
+                            android:id="@+id/caloriescount">
+
+                        </TextView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/caloriesnumber"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/caloriestext">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CALORIES"
+                            android:textColor="@color/orange"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textSize="21sp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/caloriesnumber"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_fire">
+
+                        </ImageView>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                app:cardCornerRadius="250dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/centerhorizontalline">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#171616">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/distancenumber"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/orange"
+                            android:textSize="30sp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textStyle="bold"
+                            android:id="@+id/distancecount">
+
+                        </TextView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/distancenumber"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/distancetext">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DISTANCE"
+                            android:textColor="@color/orange"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textSize="21sp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/distancenumber"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_distance">
+
+                        </ImageView>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -4,14 +4,234 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ContactUs">
+    tools:context=".ContactUs"
+    android:background="#2C2C2C">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="contact us"
-        android:textSize="35sp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    </TextView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/headingaboutus"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#171616">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center_vertical"
+                android:text="CONTACT US"
+                android:textColor="@color/orange"
+                android:textSize="25sp"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="CALL THE APP DEVELOPERS"
+                android:textColor="@color/orange"
+                android:textSize="21sp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Zeeshaan Tandel"
+                android:textStyle="bold|italic"
+                android:textColor="@color/white"
+                android:textSize="21sp">
+
+            </TextView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_phone"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/zeeshaan_call">
+
+                </ImageView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Omkar Satav"
+                    android:textStyle="bold|italic"
+                    android:textColor="@color/white"
+                    android:textSize="21sp">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_phone"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/omkar_call">
+
+                </ImageView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pratham Thorve"
+                    android:textStyle="bold|italic"
+                    android:textColor="@color/white"
+                    android:textSize="21sp">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_phone"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/pratham_call">
+
+                </ImageView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Aditya Soude"
+                    android:textStyle="bold|italic"
+                    android:textColor="@color/white"
+                    android:textSize="21sp">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_phone"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/aditya_call">
+
+                </ImageView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="MAIL THE Pro-FIT COMMUNITY"
+                android:textColor="@color/orange"
+                android:textSize="21sp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:text="send email"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_bg"
+                android:id="@+id/sendEmail">
+
+            </Button>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>
